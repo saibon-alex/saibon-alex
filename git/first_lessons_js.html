@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First lessons JS</title>
+    <style>
+        body {
+            font-size: 1.3rem;
+        }
+        h1 {
+            text-align: center;
+            font-family: georgia;
+        }
+        #bold {
+            font-weight: bold;
+        }
+        .altStyle {
+            background-color: #333;
+            color: #fff;
+        }
+        .fontSize_x2 {
+            font-size: 2em
+        }
+        button {
+            display: block;
+            margin: 30px;
+            background-color: rgb(138, 3, 3);
+            color: rgb(243, 237, 237);
+            width: 250px;
+            height: 60px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .test {
+            width: 200px;
+            height: 300px;
+            background-color: rgb(90, 201, 253);
+        }
+    </style>
+    <script src="jQuery/jQuery.js"></script>
+</head>
+<body>
+    <h1>JS first lessons</h1>
+    <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem ipsa corporis nulla. Voluptatem provident porro quos nulla nisi rerum harum aperiam nihil dignissimos aut autem nobis enim, nam ipsum!</p>
+    <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat distinctio sunt quasi architecto omnis nisi assumenda saepe corporis asperiores? Impedit distinctio delectus aspernatur debitis a possimus dolore assumenda eius deleniti.</p>
+    <p class="p3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quidem voluptas aut iusto adipisci ad molestiae itaque repudiandae veniam non, eaque aliquam optio veritatis eum repellendus, tempore fugit, numquam placeat.</p>
+    <button class="swith">Переключатель </button>
+    <!-- <button class="swithText">Переключатель Текста </button> -->
+    <div class="test"></div>
+    <script>
+
+        // $(document).ready(function() {
+        //     $('.swith').click(function() {
+        //         $('.test').slideToggle();
+        //     }); 
+
+        //     // $('.swithText').click(function() {
+        //     //     $('body').toggleClass('fontSize_x2');
+        //     // });
+
+        // //     $('html').click(function(event) {
+        // //         let x = event.screenX;
+        // //         let y = event.screenY;
+        // //         let target = event.target;
+
+        // //         console.log('Klick on ' + target + ' & ' + x + ' ' + y);
+        // //     });
+            
+        // });
+
+        function print(text) {
+            document.write(text);
+        };
+
+        function log(x) {
+            console.log(x);
+        }
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        // -------------------------------------------------------
+
+
+        // functtt([1, [2, 7, 8], [3, 4, [5, 6]]]);
+        // log(arr4);
+
+        // exercise 5
+
+        // let arr5 = [1, [2, 7, 8], [3, 4], [5, [6, 7]]];
+        // let out = [];
+
+        // function f5(arr) {
+
+        //     for (elem of arr) {
+        //         if (typeof elem == 'object') {
+        //             f5(elem);
+        //         } else {
+        //             out.push(elem ** 2);
+        //         }
+        //     }
+
+        //     return out;
+        // }
+        // log(f5(arr5));
+
+        // .filter()
+
+        let arr = [-3,  -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 11, 33];
+        let arr2 = ['qweett', 'rtrtrr', "werw", "ere"];
+        let arr3 =  [1, 2, [3, 4], 5, [6, 7], "stwwr"];
+
+        let result = arr.filter((elem) => elem < 0).length;
+
+        log(result);
+
+
+    </script>
+
+</body>
+</html>
