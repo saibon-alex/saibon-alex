@@ -79,129 +79,44 @@
         function log(x) {
             console.log(x);
         }
-        // -------------------------------------------------------
-
-
-        function getOwnDivisors(num) {
-            
-            let divisors = [];
-
-            for (let i = 1; i < num; i++) {
-                if (num % i == 0) {
-                    divisors.push(i);
-                }
-            }
-
-            return divisors;
-        }
-
 
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
-        
+        // -------------------------------------------------------
 
-        
-        function randomNumberFromArr(arr) {
-            return arr[getRandomInt(0, arr.length -1)];
-        }
-        
 
-        function sumSquareCube(num1, num2) {
+        // functtt([1, [2, 7, 8], [3, 4, [5, 6]]]);
+        // log(arr4);
 
-            function square(num) {return num * num;};
-            function cube(num) {return num * num * num;};
+        // exercise 5
 
-            return square(num1) + cube(num2);
+        // let arr5 = [1, [2, 7, 8], [3, 4], [5, [6, 7]]];
+        // let out = [];
 
-        };
+        // function f5(arr) {
 
-        // console.log(sumSquareCube(3, 3));
-
-        function squad(num) {return num ** 2;}; 
-        function reverse(str) {return str.split('').reverse().join('')};
-        function capitalize(str) {return str.charAt(0).toUpperCase() + str.slice(1)};
-
-        let arr1 = [1, 2, 3, 4, 5];
-        let arr2 = ['harry', 'rone', 'hermiona'];
-
-        function each(arr, callback) {
-            let result = [];
-            
-            for (let elem of arr) {
-                result.push( callback(elem) ); // вызываем функцию-коллбэк
-            }
-            
-            return result;
-        };
-
-       
-        // log(each(arr2, capitalize));
-
-        let obj1 = {a: 1, b: {c: 2, d: 3, e: 4}, f: {g: 5, j: 6, k: {l: 7, m: {n: 8, o: 9}}}};
-
-        // function func(obj) {
-        //     for (let key in obj) {
-        //         if (typeof obj[key] == 'object') {
-        //             // log('objekt detected');
-        //             func(obj[key]);
+        //     for (elem of arr) {
+        //         if (typeof elem == 'object') {
+        //             f5(elem);
         //         } else {
-        //             log(obj[key]);
-        //         };
+        //             out.push(elem ** 2);
+        //         }
+        //     }
 
+        //     return out;
+        // }
+        // log(f5(arr5));
 
-        //         // console.log(typeof(obj[key]));
-        //         // if (typeof obj["elem"] == 'object') {
-        //         //     func(elem);
-        //         // } else {
-        //         //     console.log(obj["elem"]);
-        //         // }
-        //     };
-        // };
+        // .filter()
 
-        // func(obj1);
+        let arr = [-3,  -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 11, 33];
+        let arr2 = ['qweett', 'rtrtrr', "werw", "ere"];
+        let arr3 =  [1, 2, [3, 4], 5, [6, 7], "stwwr"];
 
-        // log(typeof obj1);
+        let result = arr.filter((elem) => elem < 0).length;
 
-        let obj2 = {a: 1, b: {c: 2, d: 3, e: 4}, f: {g: 5, j: 6, k: {l: 7, m: {n: 8, o: 9}}}};
-
-        function func(obj) {
-            let sum = 0;
-            
-            for (let key in obj) {
-                if (typeof obj[key] == 'object') {
-                    sum += func(obj[key]);
-                } else {
-                    sum += obj[key];
-                }
-            }
-            
-            return sum;
-        }
-
-        // console.log(func(obj2));
-
-        let someArr = ['a', ['b', 'c', 'd'], ['e', 'f', ['g', ['j', 'k']]]];
-
-        function concatArr(arr) {
-            let str = 'a';
-
-            for (elem of arr) {
-                if (typeof elem == 'object') {
-                    str + concatArr(elem);
-                } else {
-                    str + elem;
-                }
-            }
-
-            return str;
-        };
-        log(concatArr(someArr));
-        
-
-
-        
-
+        log(result);
 
 
     </script>
